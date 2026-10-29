@@ -340,3 +340,25 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
 @keyframes rank-badge-glow {0%,100%{box-shadow:0 0 0 transparent}35%{box-shadow:0 0 17px color-mix(in srgb,var(--rank-accent) 42%,transparent)}}
 @keyframes rank-star-twinkle {0%,100%{opacity:.7;transform:scale(1) rotate(0)}50%{opacity:1;transform:scale(1.35) rotate(25deg)}}
 @media(prefers-reduced-motion:reduce){.shop-cards > .shop-card .rank-visible,.shop-cards > .shop-card .rank-visible .rank-star{animation:none!important}}
+
+/* トップタイトル：ページ表示時にふわっと浮かび上がる */
+.hero-copy h1 {
+  animation: heroFadeUp 0.85s ease-out both;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy h1 {
+    animation: none;
+  }
+}
