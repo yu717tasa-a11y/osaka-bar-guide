@@ -1,0 +1,2 @@
+写真はこのフォルダに置きます。Madonna: madonna.jpg / ROSE: rose.jpg / GENTLY: gently.jpg
+別の店舗の画像はHTMLのsrc属性に記載したファイル名に合わせて配置してください。
