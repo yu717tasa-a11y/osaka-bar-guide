@@ -374,3 +374,90 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
   }
   #shop-5 .second-entry-scroll .price-table { font-size: 13px; }
 }
+
+
+/* 2026-10-31: おすすめポイントのみ ピンクゴールドのダイヤ装飾 */
+.night-guide .feature-diamond-list {
+  list-style: none;
+  margin: 12px 0 22px;
+  padding: 8px 16px;
+  background: #241823;
+  border: 1px solid #654154;
+  border-radius: 13px;
+}
+.night-guide .feature-diamond-list > li {
+  position: relative;
+  margin: 0;
+  padding: 13px 3px 13px 29px;
+  line-height: 1.8;
+}
+.night-guide .feature-diamond-list > li + li {
+  border-top: 1px solid rgba(231, 161, 190, .18);
+}
+.night-guide .feature-diamond-list > li::before {
+  content: "◆";
+  position: absolute;
+  top: 13px;
+  left: 2px;
+  color: #e6b38c;
+  font-size: 13px;
+  line-height: 1.8;
+  text-shadow: 0 0 0 transparent;
+  transform-origin: center;
+}
+.night-guide .feature-diamond-list.diamond-shine-once > li::before {
+  animation: featureDiamondShine 1s ease-out both;
+}
+.night-guide .feature-diamond-list.diamond-shine-once > li:nth-child(2)::before { animation-delay: .2s; }
+.night-guide .feature-diamond-list.diamond-shine-once > li:nth-child(3)::before { animation-delay: .4s; }
+.night-guide .feature-diamond-list.diamond-shine-once > li:nth-child(4)::before { animation-delay: .6s; }
+@keyframes featureDiamondShine {
+  0%,100% {color:#e6b38c; text-shadow:0 0 0 transparent; transform:scale(1)}
+  45% {color:#ffe1b0; text-shadow:0 0 9px rgba(255,189,208,.9),0 0 15px rgba(245,191,134,.55); transform:scale(1.25)}
+}
+@media (prefers-reduced-motion: reduce) {
+  .night-guide .feature-diamond-list.diamond-shine-once > li::before {animation:none!important}
+}
+
+
+/* 2026-10-31: 「こんな人におすすめ」のダイヤもおすすめポイントと統一 */
+.night-guide .audience-diamond-list {
+  list-style: none;
+  margin: 12px 0 22px;
+  padding: 8px 16px;
+  background: #241823;
+  border: 1px solid #654154;
+  border-radius: 13px;
+}
+.night-guide .audience-diamond-list > li {
+  position: relative;
+  margin: 0;
+  padding: 13px 3px 13px 29px;
+  line-height: 1.8;
+}
+.night-guide .audience-diamond-list > li + li {
+  border-top: 1px solid rgba(231, 161, 190, .18);
+}
+.night-guide .audience-diamond-list > li::before {
+  content: "◆";
+  position: absolute;
+  top: 13px;
+  left: 2px;
+  color: #e6b38c;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.8;
+  transform-origin: center;
+}
+.night-guide .audience-diamond-list.diamond-shine-once > li::before {
+  animation: featureDiamondShine 1s ease-out both;
+}
+.night-guide .audience-diamond-list.diamond-shine-once > li:nth-child(2)::before { animation-delay: .2s; }
+.night-guide .audience-diamond-list.diamond-shine-once > li:nth-child(3)::before { animation-delay: .4s; }
+.night-guide .audience-diamond-list.diamond-shine-once > li:nth-child(4)::before { animation-delay: .6s; }
+@media (prefers-reduced-motion: reduce) {
+  .night-guide .audience-diamond-list.diamond-shine-once > li::before { animation:none!important; }
+}
+
+/* Madonna と ROSE: 飲み放題料金の表と料金シミュレーションの間だけ余白を足す */
+#madonna .sim-toggle, #shop-2 .sim-toggle { margin-top: 16px; }
