@@ -567,3 +567,13 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
 /* CROSS OWL: 料金表をESZと同様に表示 */
 #minami-cross-owl .esz-table-wrap{display:block;width:100%;overflow-x:auto;}
 #minami-cross-owl .esz-table{display:table;width:100%;}
+
+/* TOC layout fix: flatten the two region pairs into the same 2-column grid.
+   Expanded store menus still occupy a full-width row. */
+.toc > .toc-region-row { display:contents !important; }
+.toc .toc-region-pair { display:contents !important; }
+.toc > a, .toc .toc-region-pair > a, .toc .toc-region-pair > label {
+  width:100%; min-width:0; min-height:55px; display:flex;
+  align-items:center; justify-content:center; box-sizing:border-box;
+}
+.toc .toc-region-row .toc-submenu { grid-column:1 / -1; margin-top:0; }
