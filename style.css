@@ -557,3 +557,13 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
 #minami-cross-owl .esz-drinks>div{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid #70485d;}
 #minami-cross-owl .esz-drinks dt{font-weight:normal;}
 #minami-cross-owl .esz-drinks dd{margin:0;text-align:right;font-weight:600;}
+
+/* 2026-11-06: 目次をPC・スマホともに2列×5行へ統一 */
+.toc{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;}
+.toc > a{min-width:0;display:flex;align-items:center;justify-content:center;}
+.toc > .toc-region-row{grid-column:1 / -1!important;}
+.toc .toc-region-pair{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+.toc .toc-region-pair > a,.toc .toc-region-pair > label{box-sizing:border-box;min-height:55px;}
+/* CROSS OWL: 料金表をESZと同様に表示 */
+#minami-cross-owl .esz-table-wrap{display:block;width:100%;overflow-x:auto;}
+#minami-cross-owl .esz-table{display:table;width:100%;}
