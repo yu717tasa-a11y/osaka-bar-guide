@@ -542,3 +542,18 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
 #minami-esz .esz-drinks>div{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid #70485d;}
 #minami-esz .esz-drinks dt{font-weight:normal;}
 #minami-esz .esz-drinks dd{margin:0;text-align:right;font-weight:600;}
+
+/* CROSS OWL: ESZと同じ料金表デザインを適用 */
+#minami-cross-owl .esz-info h5{margin:22px 0 10px;font-size:1.05em;}
+#minami-cross-owl .esz-table-wrap{width:100%;overflow-x:auto;border:1px solid #80516a;border-radius:12px;}
+#minami-cross-owl .esz-table{width:100%;border-collapse:collapse;font-size:clamp(11px,2.7vw,15px);table-layout:fixed;}
+#minami-cross-owl .esz-table th,#minami-cross-owl .esz-table td{padding:12px 5px;text-align:center;border-bottom:1px solid #70485d;overflow-wrap:anywhere;}
+#minami-cross-owl .esz-table thead th{background:#57243e;color:#fff0f5;}
+#minami-cross-owl .esz-table tbody th{background:#35202f;color:#ffe4ee;}
+#minami-cross-owl .esz-table tbody tr:last-child td,#minami-cross-owl .esz-table tbody tr:last-child th{border-bottom:0;}
+#minami-cross-owl .esz-time-table th:first-child{width:30%;}
+#minami-cross-owl .esz-time-table th small{display:block;font-size:.8em;font-weight:normal;margin-top:5px;white-space:normal;}
+#minami-cross-owl .esz-drinks{margin:0 0 18px;}
+#minami-cross-owl .esz-drinks>div{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid #70485d;}
+#minami-cross-owl .esz-drinks dt{font-weight:normal;}
+#minami-cross-owl .esz-drinks dd{margin:0;text-align:right;font-weight:600;}
