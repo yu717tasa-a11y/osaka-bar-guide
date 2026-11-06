@@ -518,3 +518,12 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
  .toc .toc-region-minami > #toc-minami-toggle:checked ~ .toc-submenu-minami,
  .toc .toc-region-kita > #toc-kita-toggle:checked ~ .toc-submenu-kita { animation:none; }
 }
+
+/* 2026-11-06 ミナミ店舗一覧 */
+.minami-shop-index{max-width:850px;margin:0 auto 25px;padding:20px;border:1px solid #71435c;border-radius:16px;background:#211520;color:#f9eaf1}
+.minami-shop-index h3{margin:0 0 6px;font-size:19px;color:#f4c68d}
+.minami-shop-index p{margin:0 0 15px;font-size:13px;color:#d7bdcb}
+.minami-shop-index-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.minami-shop-index-links a{display:flex;align-items:center;padding:12px 13px;min-height:48px;border:1px solid #684052;border-radius:9px;background:#120e16;color:#f7eaf0;font-size:13px;overflow-wrap:anywhere}
+.minami-shop-index-links a:hover,.minami-shop-index-links a:focus-visible{border-color:#e4bc80;background:#392236}
+@media(max-width:420px){.minami-shop-index{padding:14px}.minami-shop-index-links{grid-template-columns:1fr}}
