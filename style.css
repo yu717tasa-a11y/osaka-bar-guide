@@ -527,3 +527,18 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
 .minami-shop-index-links a{display:flex;align-items:center;padding:12px 13px;min-height:48px;border:1px solid #684052;border-radius:9px;background:#120e16;color:#f7eaf0;font-size:13px;overflow-wrap:anywhere}
 .minami-shop-index-links a:hover,.minami-shop-index-links a:focus-visible{border-color:#e4bc80;background:#392236}
 @media(max-width:420px){.minami-shop-index{padding:14px}.minami-shop-index-links{grid-template-columns:1fr}}
+
+/* ESZ store details: mobile-friendly tables */
+#minami-esz .esz-info h5{margin:22px 0 10px;font-size:1.05em;}
+#minami-esz .esz-table-wrap{width:100%;overflow-x:auto;border:1px solid #80516a;border-radius:12px;}
+#minami-esz .esz-table{width:100%;border-collapse:collapse;font-size:clamp(11px,2.7vw,15px);table-layout:fixed;}
+#minami-esz .esz-table th,#minami-esz .esz-table td{padding:12px 5px;text-align:center;border-bottom:1px solid #70485d;overflow-wrap:anywhere;}
+#minami-esz .esz-table thead th{background:#57243e;color:#fff0f5;}
+#minami-esz .esz-table tbody th{background:#35202f;color:#ffe4ee;}
+#minami-esz .esz-table tbody tr:last-child td,#minami-esz .esz-table tbody tr:last-child th{border-bottom:0;}
+#minami-esz .esz-time-table th:first-child{width:30%;}
+#minami-esz .esz-time-table th small{display:block;font-size:.8em;font-weight:normal;margin-top:5px;white-space:normal;}
+#minami-esz .esz-drinks{margin:0 0 18px;}
+#minami-esz .esz-drinks>div{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid #70485d;}
+#minami-esz .esz-drinks dt{font-weight:normal;}
+#minami-esz .esz-drinks dd{margin:0;text-align:right;font-weight:600;}
