@@ -528,68 +528,118 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
 .minami-shop-index-links a:hover,.minami-shop-index-links a:focus-visible{border-color:#e4bc80;background:#392236}
 @media(max-width:420px){.minami-shop-index{padding:14px}.minami-shop-index-links{grid-template-columns:1fr}}
 
-/* ESZ store details: mobile-friendly tables */
-#minami-esz .esz-info h5{margin:22px 0 10px;font-size:1.05em;}
-#minami-esz .esz-table-wrap{width:100%;overflow-x:auto;border:1px solid #80516a;border-radius:12px;}
-#minami-esz .esz-table{width:100%;border-collapse:collapse;font-size:clamp(11px,2.7vw,15px);table-layout:fixed;}
-#minami-esz .esz-table th,#minami-esz .esz-table td{padding:12px 5px;text-align:center;border-bottom:1px solid #70485d;overflow-wrap:anywhere;}
-#minami-esz .esz-table thead th{background:#57243e;color:#fff0f5;}
-#minami-esz .esz-table tbody th{background:#35202f;color:#ffe4ee;}
-#minami-esz .esz-table tbody tr:last-child td,#minami-esz .esz-table tbody tr:last-child th{border-bottom:0;}
-#minami-esz .esz-time-table th:first-child{width:30%;}
-#minami-esz .esz-time-table th small{display:block;font-size:.8em;font-weight:normal;margin-top:5px;white-space:normal;}
-#minami-esz .esz-drinks{margin:0 0 18px;}
-#minami-esz .esz-drinks>div{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid #70485d;}
-#minami-esz .esz-drinks dt{font-weight:normal;}
-#minami-esz .esz-drinks dd{margin:0;text-align:right;font-weight:600;}
+/* 目次：PC・スマホ共通の2列グリッドと開閉メニュー */
+#contents .toc{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:start;}
+#contents .toc>a,#contents .toc>details>summary{display:flex!important;align-items:center;justify-content:center;min-height:60px;width:100%;padding:12px 9px;box-sizing:border-box;text-align:center;font-size:14px;font-weight:700;line-height:1.5;background:linear-gradient(160deg,#281824,#170f1b);color:#f5e6ed;border:1px solid #69425a;border-radius:12px;box-shadow:0 3px 0 #08060b;cursor:pointer;list-style:none;}
+#contents .toc>details>summary::-webkit-details-marker{display:none;}
+#contents .toc>details{min-width:0;margin:0;padding:0;border:0;background:transparent;box-shadow:none;}
+#contents .toc>details>.toc-submenu{display:grid!important;grid-template-columns:1fr!important;gap:6px;margin-top:8px;padding:9px;background:#211421;border:1px solid #69425a;border-radius:12px;}
+#contents .toc>details:not([open])>.toc-submenu{display:none!important;}
+#contents .toc>details>.toc-submenu a{display:flex;align-items:center;justify-content:flex-start;text-align:left;min-height:42px;padding:9px;}
+@media(max-width:700px){#contents .toc>a,#contents .toc>details>summary{min-height:55px;font-size:12px;padding:9px 5px;}}
 
-/* CROSS OWL: ESZと同じ料金表デザインを適用 */
-#minami-cross-owl .esz-info h5{margin:22px 0 10px;font-size:1.05em;}
-#minami-cross-owl .esz-table-wrap{width:100%;overflow-x:auto;border:1px solid #80516a;border-radius:12px;}
-#minami-cross-owl .esz-table{width:100%;border-collapse:collapse;font-size:clamp(11px,2.7vw,15px);table-layout:fixed;}
-#minami-cross-owl .esz-table th,#minami-cross-owl .esz-table td{padding:12px 5px;text-align:center;border-bottom:1px solid #70485d;overflow-wrap:anywhere;}
-#minami-cross-owl .esz-table thead th{background:#57243e;color:#fff0f5;}
-#minami-cross-owl .esz-table tbody th{background:#35202f;color:#ffe4ee;}
-#minami-cross-owl .esz-table tbody tr:last-child td,#minami-cross-owl .esz-table tbody tr:last-child th{border-bottom:0;}
-#minami-cross-owl .esz-time-table th:first-child{width:30%;}
-#minami-cross-owl .esz-time-table th small{display:block;font-size:.8em;font-weight:normal;margin-top:5px;white-space:normal;}
-#minami-cross-owl .esz-drinks{margin:0 0 18px;}
-#minami-cross-owl .esz-drinks>div{display:flex;justify-content:space-between;gap:12px;padding:12px 4px;border-bottom:1px solid #70485d;}
-#minami-cross-owl .esz-drinks dt{font-weight:normal;}
-#minami-cross-owl .esz-drinks dd{margin:0;text-align:right;font-weight:600;}
 
-/* 2026-11-06: 目次をPC・スマホともに2列×5行へ統一 */
-.toc{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;}
-.toc > a{min-width:0;display:flex;align-items:center;justify-content:center;}
-.toc > .toc-region-row{grid-column:1 / -1!important;}
-.toc .toc-region-pair{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
-.toc .toc-region-pair > a,.toc .toc-region-pair > label{box-sizing:border-box;min-height:55px;}
-/* CROSS OWL: 料金表をESZと同様に表示 */
-#minami-cross-owl .esz-table-wrap{display:block;width:100%;overflow-x:auto;}
-#minami-cross-owl .esz-table{display:table;width:100%;}
-
-/* TOC layout fix: flatten the two region pairs into the same 2-column grid.
-   Expanded store menus still occupy a full-width row. */
-.toc > .toc-region-row { display:contents !important; }
-.toc .toc-region-pair { display:contents !important; }
-.toc > a, .toc .toc-region-pair > a, .toc .toc-region-pair > label {
-  width:100%; min-width:0; min-height:55px; display:flex;
-  align-items:center; justify-content:center; box-sizing:border-box;
+/* 2026-11-07: ESZ / CROSS OWL 表の横幅調整（内容は変更しない） */
+#minami-esz .esz-table,
+#minami-cross-owl .esz-table {
+  width:100%; min-width:0; max-width:100%; table-layout:fixed;
+  border-collapse:collapse;
 }
-.toc .toc-region-row .toc-submenu { grid-column:1 / -1; margin-top:0; }
+#minami-esz .esz-table th, #minami-esz .esz-table td,
+#minami-cross-owl .esz-table th, #minami-cross-owl .esz-table td {
+  min-width:0; width:auto; padding:11px 7px;
+  overflow-wrap:anywhere; word-break:normal; white-space:normal;
+}
+#minami-esz .esz-time-table th:first-child {width:31%;}
+#minami-cross-owl .esz-time-table th:first-child {width:38%;}
+#minami-esz .esz-time-table th small,
+#minami-cross-owl .esz-time-table th small {display:block;font-size:.83em;line-height:1.5;}
+@media(max-width:600px){
+ #minami-esz .esz-table, #minami-cross-owl .esz-table {font-size:clamp(11px,3.1vw,14px);}
+ #minami-esz .esz-table th, #minami-esz .esz-table td,
+ #minami-cross-owl .esz-table th, #minami-cross-owl .esz-table td {padding:10px 5px;}
+}
+/* 開いている目次は左右2列を使い、店舗一覧を全幅で表示 */
+#contents .toc > details.toc-dropdown[open] {grid-column:1 / -1;}
+#contents .toc > details.toc-dropdown[open] > .toc-submenu {
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ width:100%;box-sizing:border-box;
+}
+@media(max-width:700px){
+ #contents .toc > details.toc-dropdown[open] > .toc-submenu {grid-template-columns:1fr!important;}
+}
 
-/* TOC final: ten direct grid items, including two native expandable details */
-#contents .toc {display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;align-items:start;}
-#contents .toc > a,#contents .toc > details > summary {display:flex!important;align-items:center;justify-content:center;min-height:64px;width:100%;padding:12px 10px;box-sizing:border-box;text-align:center;font-size:14px;font-weight:700;line-height:1.5;background:linear-gradient(160deg,#281824,#170f1b);color:#f5e6ed;border:1px solid #69425a;border-radius:12px;box-shadow:0 3px 0 #08060b;cursor:pointer;list-style:none;}
-#contents .toc > details > summary::-webkit-details-marker{display:none;}
-#contents .toc > details{min-width:0;background:transparent;border:0;border-radius:0;padding:0;position:relative;}
-#contents .toc > details[open]{z-index:2;}
-#contents .toc > details > .toc-submenu{display:grid!important;grid-template-columns:1fr!important;gap:6px;margin-top:8px;padding:9px;background:#211421;border:1px solid #69425a;border-radius:12px;}
-#contents .toc > details:not([open]) > .toc-submenu{display:none!important;}
-#contents .toc > details > .toc-submenu a{min-height:42px;text-align:left;justify-content:flex-start;}
-@media(max-width:700px){#contents .toc > a,#contents .toc > details > summary{min-height:55px;font-size:12px;padding:9px 5px;}}
+/* 2026-11-07: Rosier・Voile の料金表をESZと同様のコンパクト表示に */
+#minami-rosier .esz-table, #minami-voile .esz-table {
+ width:100%;min-width:0;max-width:100%;table-layout:fixed;border-collapse:collapse;
+}
+#minami-rosier .esz-table th, #minami-rosier .esz-table td,
+#minami-voile .esz-table th, #minami-voile .esz-table td {
+ min-width:0;width:auto;padding:11px 7px;overflow-wrap:anywhere;word-break:normal;white-space:normal;
+}
+@media(max-width:600px){
+ #minami-rosier .esz-table,#minami-voile .esz-table {font-size:clamp(11px,3.1vw,14px);}
+ #minami-rosier .esz-table th,#minami-rosier .esz-table td,
+ #minami-voile .esz-table th,#minami-voile .esz-table td {padding:10px 5px;}
+}
 
-/* 目次はPC・スマホとも2列に統一。店舗へのリンクは開閉式一覧へ直接移動 */
-#contents .toc {display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;}
-#contents .toc > a {grid-column:auto!important;width:100%!important;min-width:0!important;box-sizing:border-box;}
-@media (max-width:380px) {#contents .toc {gap:7px!important;}#contents .toc > a {font-size:12px!important;padding:10px 5px!important;}}
+/* RED DRAGON / ROMANTIC: smartphone-fit pricing tables */
+#minami-red-dragon .compact-shop-price .price-table,
+#minami-romantic .compact-shop-price .price-table {width:100%;min-width:0;table-layout:fixed;}
+#minami-red-dragon .compact-shop-price,
+#minami-romantic .compact-shop-price {max-width:100%;overflow-x:hidden;}
+#minami-red-dragon .compact-shop-price th,#minami-red-dragon .compact-shop-price td,
+#minami-romantic .compact-shop-price th,#minami-romantic .compact-shop-price td {overflow-wrap:anywhere;word-break:normal;white-space:normal;}
+@media(max-width:500px){
+#minami-red-dragon .compact-shop-price .price-table,#minami-romantic .compact-shop-price .price-table {font-size:clamp(10px,2.8vw,13px);}
+#minami-red-dragon .compact-shop-price th,#minami-red-dragon .compact-shop-price td,
+#minami-romantic .compact-shop-price th,#minami-romantic .compact-shop-price td {padding:10px 5px;}
+#minami-red-dragon .compact-shop-price .price-table:has(th:nth-child(4)) th:first-child,
+#minami-romantic .compact-shop-price .price-table:has(th:nth-child(4)) th:first-child {width:31%;}
+}
+
+/* 2026-11-07: RED DRAGON / ROMANTIC / RED REVOLUTION - ESZと同じ列幅 */
+#minami-red-dragon .esz-table,
+#minami-romantic .esz-table,
+#minami-red-revolution .esz-table {
+ width:100%;min-width:0;max-width:100%;table-layout:fixed;border-collapse:collapse;
+}
+#minami-red-dragon .esz-table th, #minami-red-dragon .esz-table td,
+#minami-romantic .esz-table th, #minami-romantic .esz-table td,
+#minami-red-revolution .esz-table th, #minami-red-revolution .esz-table td {
+ min-width:0;width:auto;padding:11px 7px;overflow-wrap:anywhere;word-break:normal;white-space:normal;
+}
+#minami-red-dragon .esz-time-table th:first-child,
+#minami-romantic .esz-time-table th:first-child {width:31%;}
+@media(max-width:600px){
+#minami-red-dragon .esz-table,
+#minami-romantic .esz-table,
+#minami-red-revolution .esz-table {font-size:clamp(11px,3.1vw,14px);}
+#minami-red-dragon .esz-table th, #minami-red-dragon .esz-table td,
+#minami-romantic .esz-table th, #minami-romantic .esz-table td,
+#minami-red-revolution .esz-table th, #minami-red-revolution .esz-table td {padding:10px 5px;}
+}
+
+/* Perv: compact condition-based pricing tables (2026-11-07) */
+#minami-perv .perv-pricing h5{margin-top:28px;}
+#minami-perv .perv-hours{font-size:13px;color:#d9c0cb;margin:0 0 10px;}
+#minami-perv .perv-table-wrap{width:100%;max-width:100%;overflow-x:hidden;}
+#minami-perv .perv-table{width:100%;min-width:0;table-layout:fixed;border-collapse:collapse;}
+#minami-perv .perv-table th,#minami-perv .perv-table td{min-width:0;width:auto;overflow-wrap:anywhere;white-space:normal;word-break:normal;padding:11px 8px;}
+#minami-perv .perv-condition-table th:first-child{width:64%;}
+#minami-perv .perv-condition-table th:last-child{width:36%;}
+#minami-perv .perv-pricing .shop-detail-note{margin-top:12px;}
+@media(max-width:600px){#minami-perv .perv-table{font-size:clamp(11px,3.1vw,14px);}#minami-perv .perv-table th,#minami-perv .perv-table td{padding:10px 7px;}}
+
+/* ダチュラエデン: すべての料金表をスマホ幅内に収める */
+#minami-datura-eden .esz-table-wrap {width:100%;max-width:100%;min-width:0;overflow-x:hidden;box-sizing:border-box;}
+#minami-datura-eden .esz-table {width:100%;max-width:100%;min-width:0;table-layout:fixed;border-collapse:collapse;}
+#minami-datura-eden .esz-table th,
+#minami-datura-eden .esz-table td {box-sizing:border-box;min-width:0;width:auto;padding:10px 7px;white-space:normal;overflow-wrap:anywhere;word-break:normal;}
+#minami-datura-eden .esz-table th:first-child {width:54%;}
+#minami-datura-eden .esz-time-table th:first-child {width:58%;}
+#minami-datura-eden .esz-time-table th small {display:block;font-size:.84em;line-height:1.45;}
+@media(max-width:600px){
+ #minami-datura-eden .esz-table {font-size:clamp(11px,3.1vw,14px);}
+ #minami-datura-eden .esz-table th,#minami-datura-eden .esz-table td {padding:10px 6px;}
+}
