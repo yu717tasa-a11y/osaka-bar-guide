@@ -694,3 +694,23 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
   border-spacing:0;
   width:100%;
 }
+
+/* ミナミ・キタ店舗一覧：店舗の特徴（仮文言） */
+#minami .shop-feature-intro, #kita .shop-feature-intro {
+  padding: 4px 0 6px;
+  color: #f6e6ef;
+}
+#minami .shop-feature-title, #kita .shop-feature-title {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f5c3d5;
+  border-left: 3px solid #ec4b91;
+  padding-left: 10px;
+}
+#minami .shop-feature-placeholder, #kita .shop-feature-placeholder {
+  margin: 0;
+  color: #c8b6c1;
+  font-size: 14px;
+  line-height: 1.8;
+}
