@@ -672,3 +672,25 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
 #kita .kita-photo img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 #kita .kita-photo img[hidden] {display:none!important;}
 #kita .kita-photo span {position:relative;}
+
+/* 2026-11-14: five stores — match Madonna rounded pricing tables */
+#minami-cross-owl .esz-table-wrap,
+#minami-red-dragon .esz-table-wrap,
+#minami-romantic .esz-table-wrap,
+#minami-red-revolution .esz-table-wrap,
+#minami-datura-eden .esz-table-wrap {
+  border:1px solid #694157;
+  border-radius:12px;
+  overflow:hidden;
+  background:#160e17;
+  max-width:100%;
+}
+#minami-cross-owl .esz-table,
+#minami-red-dragon .esz-table,
+#minami-romantic .esz-table,
+#minami-red-revolution .esz-table,
+#minami-datura-eden .esz-table {
+  border-collapse:separate;
+  border-spacing:0;
+  width:100%;
+}
