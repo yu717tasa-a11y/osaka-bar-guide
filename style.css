@@ -706,3 +706,11 @@ a:focus-visible,summary:focus-visible{outline-color:#ffc2dc}
   font-size: 14px;
   line-height: 1.8;
 }
+
+/* 「ハプニングバーとは？」：スマートフォン向けの読みやすさ調整 */
+#about .content-card p + p { margin-top: 1.1em; }
+@media (max-width: 700px) {
+  #about .content-card { padding: 20px 19px; }
+  #about .content-card p { font-size: 16px; line-height: 1.75; }
+  #about .content-card p + p { margin-top: 1em; }
+}
